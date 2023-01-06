@@ -1,28 +1,17 @@
-# Ansible-Lab-Automation
+# kube-home-ops
 
  <p align="left">
-   <img src="https://i.imgur.com/4l9bHvG.png" alt="ansible logo" width="150" align="left" />
    <img src="https://i.imgur.com/EXNTJnA.png" alt="kubernetes home logo" width="150" align="left" />
 </p>
 
-## Operations for my home lab
-
-_...with Ansible and Kubernetes!_ :sailboat:
-
-[![GitHub Super-Linter](https://github.com/John-Limb/Ansible-Lab-Automation/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
-[![Datree Policy Check](https://github.com/John-Limb/Ansible-Lab-Automation/actions/workflows/datree.yml/badge.svg)](https://github.com/marketplace/actions/datree-cli)
+## Operations for my home k3s cluster
 
 ## :closed_book: Overview
 
 This repository contains everything I use to maintain the devices and clusters in my home, along with application deployment into my kubernetes cluster. For more
 details, see the readme's in each folder.
-Using Ansible-Galaxy to form the template for each roles folder structure to keep structures to a standard, Ansible semaphore is used to automate patching using templated jobs.
-
-* [Ansible](roles/) roles for additional configuration and application installation > Top level playbooks are in the top level of this repository.
-* [Apps](lab/apps/) YAML files for configuation and deployment off applications into kubernetes
-* [Core-Services](roles/k3s-core-services/) Configurations for the further setup of the cluster after bootsrap
-* [BootStrap](roles/k3s-boostrap/) playbooks and shell scripts to provision a HA cluster of kubernetes master nodes
-
+.
+* [Apps](clusers/prod/apps/) YAML files for configuation and deployment off applications into kubernetes
 ## :computer: Gear  
 
 I try to run everything bare metal with virtual machines (running on Proxmox).
