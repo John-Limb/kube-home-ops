@@ -6,4 +6,4 @@ metadata:
   namespace: networking-system
 spec:
   addresses:
-    - ${CLUSTER_METALLB_LB_POOL}
+    - 192.168.1.32/27
