@@ -1,0 +1,9 @@
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: metallb-pool
+  namespace: networking-system
+spec:
+  addresses:
+    - ${CLUSTER_METALLB_LB_POOL}
