@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: flux-system
+  name: global-vars
+data:
+  CLUSTER_NAME: "k3s-lab"
+  TZ: "Europe/London"
+  METALLB_TRAEFIK_ADDR: 192.168.1.38
+  CLUSTER_METALLB_LB_POOL: 192.168.1.32/27
