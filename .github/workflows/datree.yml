@@ -20,5 +20,5 @@ jobs:
       - name: Run Datree Policy Check
         uses: datreeio/action-datree@main
         with:
-          path: 'clusters/lab/apps/*/*.yaml'
+          path: 'clusters/prod/apps/*/*.yaml'
           cliArguments: '--only-k8s-files --ignore-missing-schemas --permissive-schema'
