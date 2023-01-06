@@ -4,7 +4,7 @@
    <img src="https://i.imgur.com/EXNTJnA.png" alt="kubernetes home logo" width="150" align="left" />
 </p>
 
-## Operations for my home k3s cluster
+## Operations for my home k3S cluster
 
 ## :closed_book: Overview
 
