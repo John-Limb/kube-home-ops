@@ -30,9 +30,8 @@ spec:
       enabled: true
       type: LoadBalancer
       annotations:
-        loadBalancerIP: ${METALLB_TRAEFIK_ADDR}
-        metallb.universe.tf/loadBalancerIPs: |-
-          ${METALLB_TRAEFIK_ADDR}
+        loadBalancerIP: 192.168.1.38
+        metallb.universe.tf/loadBalancerIPs: 192.168.1.38
       spec:
         externalTrafficPolicy: Local
     logs:
