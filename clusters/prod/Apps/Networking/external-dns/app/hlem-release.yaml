@@ -1,0 +1,37 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: external-dns
+  namespace: networking-system
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: external-dns
+      version: 1.12.0
+      sourceRef:
+        kind: HelmRepository
+        name: external-dns
+        namespace: flux-system
+  maxHistory: 3
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
+  values:
+    interval: 2m
+    provider: rfc2136
+  extraArgs:
+    - --provider=rfc2136
+    - --rfc2136-host=192.168.1.10
+    - --rfc2136-port=53
+    - --rfc2136-zone=${SECRET_INT_DOMAIN}
+    - --rfc2136-insecure
+    - --rfc2136-tsig-axfr # needed to enable zone transfers, which is required for deletion of records.
