@@ -4,7 +4,7 @@ metadata:
   name: networking-system-metallb
   namespace: flux-system
 spec:
-  path: ./clusters/prod/Apps/Networking/metallb
+  path: ./clusters/prod/Apps/Networking/metallb/app
   sourceRef:
     kind: GitRepository
     name: flux-system
