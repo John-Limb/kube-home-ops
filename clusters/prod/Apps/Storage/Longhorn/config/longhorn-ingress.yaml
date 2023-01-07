@@ -31,3 +31,15 @@ spec:
       commonName: "longhorn.${SECRET_INT_DOMAIN}"
       dnsNames:
       - "longhorn.${SECRET_INT_DOMAIN}"
+---
+apiVersion: externaldns.k8s.io/v1alpha1
+kind: DNSEndpoint
+metadata:
+  name: traefik
+spec:
+  endpoints:
+  - dnsName: traefik.${SECRET_INT_DOMAIN}
+    recordTTL: 180
+    recordType: A
+    targets:
+    - ${METALLB_TRAEFIK_ADDR}
