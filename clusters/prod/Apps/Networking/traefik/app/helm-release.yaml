@@ -44,7 +44,7 @@ spec:
       fallbackApiVersion: v1
     ingressRoute:
       dashboard:
-        enabled: false
+        enabled: true
     globalArguments:
       - "--global.sendanonymoususage=false"
       - "--global.checknewversion=false"
