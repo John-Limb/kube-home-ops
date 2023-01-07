@@ -1,0 +1,32 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: longhorn-dashboard
+  namespace: longhorn-system
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`longhorn.${SECRET_INT_DOMAIN}`)
+      kind: Rule
+      services:
+        - name: longhorn-frontend
+          port: 80
+  tls:
+    secretName: prod-longhorn-${SECRET_INT_CERT_DOMAIN}
+---
+    apiVersion: cert-manager.io/v1
+    kind: Certificate
+    metadata:
+      name: longhorn.${SECRET_INT_DOMAIN}
+      namespace: longhorn-system
+    spec:
+      secretName: prod-longhorn-${SECRET_INT_CERT_DOMAIN}
+      issuerRef:
+        name: letsencrypt-production
+        kind: ClusterIssuer
+      commonName: "longhorn.${SECRET_INT_DOMAIN}"
+      dnsNames:
+      - "longhorn.${SECRET_INT_DOMAIN}"
