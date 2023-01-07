@@ -52,10 +52,6 @@ spec:
         proxy-body-size: "100M"
         ssl-protocols: "TLSv1.3 TLSv1.2"
         use-forwarded-headers: "true"
-      metrics:
-        enabled: true
-        serviceMonitor:
-          enabled: true
       extraArgs:
         default-ssl-certificate: |-
           networking-system/default-ssl
