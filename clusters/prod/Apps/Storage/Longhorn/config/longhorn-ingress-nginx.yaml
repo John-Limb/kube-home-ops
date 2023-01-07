@@ -1,5 +1,5 @@
 apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
+kind: ingress
 metadata:
   name: ingress-longhorn
   namespace: longhorn-system
