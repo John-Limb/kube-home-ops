@@ -35,10 +35,11 @@ spec:
 apiVersion: externaldns.k8s.io/v1alpha1
 kind: DNSEndpoint
 metadata:
-  name: traefik
+  name: longhorn-dashboard
+  namespace: networking-system
 spec:
   endpoints:
-  - dnsName: traefik.${SECRET_INT_DOMAIN}
+  - dnsName: longhorn.${SECRET_INT_DOMAIN}
     recordTTL: 180
     recordType: A
     targets:
