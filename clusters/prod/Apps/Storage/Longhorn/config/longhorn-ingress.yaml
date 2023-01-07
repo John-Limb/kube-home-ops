@@ -31,16 +31,3 @@ spec:
       commonName: "longhorn.${SECRET_INT_DOMAIN}"
       dnsNames:
       - "longhorn.${SECRET_INT_DOMAIN}"
----
-apiVersion: externaldns.k8s.io/v1alpha1
-kind: DNSEndpoint
-metadata:
-  name: longhorn-dashboard
-  namespace: networking-system
-spec:
-  endpoints:
-  - dnsName: longhorn.${SECRET_INT_DOMAIN}
-    recordTTL: 180
-    recordType: A
-    targets:
-    - ${METALLB_TRAEFIK_ADDR}
