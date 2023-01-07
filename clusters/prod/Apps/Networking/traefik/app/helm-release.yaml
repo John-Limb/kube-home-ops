@@ -40,7 +40,7 @@ spec:
         format: json
     ingressClass:
       enabled: true
-      isDefaultClass: true
+      isDefaultClass: false
       fallbackApiVersion: v1
     ingressRoute:
       dashboard:
