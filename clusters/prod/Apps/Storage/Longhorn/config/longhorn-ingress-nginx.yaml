@@ -1,10 +1,10 @@
-apiVersion: networking.k8s.io/v1beta1
-kind: ingress
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
   name: ingress-longhorn
   namespace: longhorn-system
   annotations:
-    external-dns.home.arpa: true
+    external-dns.home.arpa: "true"
     external-dns.alpha.kubernetes.io/hostname: longhorn.${SECRET_INT_DOMAIN}
 spec:
   ingressClassName: nginx
