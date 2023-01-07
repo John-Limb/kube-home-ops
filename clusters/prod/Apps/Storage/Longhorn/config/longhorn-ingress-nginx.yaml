@@ -14,7 +14,7 @@ spec:
      - longhorn.${SECRET_INT_DOMAIN}
      secretName: prod-longhorn-${SECRET_INT_CERT_DOMAIN}
   rules:
-    - host: "longhorn.${SECRET_DOMAIN}"
+    - host: "longhorn.${SECRET_INT_DOMAIN}"
       http:
         paths:
           - path: /
