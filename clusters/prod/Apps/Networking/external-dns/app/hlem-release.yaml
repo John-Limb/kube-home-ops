@@ -26,6 +26,10 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    crd:
+      create: true
+      apiversion: externaldns.k8s.io/v1alpha1
+      kind: DNSEndpoint
     interval: 2m
     provider: rfc2136
     extraArgs:
@@ -34,3 +38,4 @@ spec:
      - --rfc2136-zone=${SECRET_INT_DOMAIN}
      - --rfc2136-insecure
      - --rfc2136-tsig-axfr # needed to enable zone transfers, which is required for deletion of records.
+     - --annotation-filter=external-dns.home.arpa/enabled in (true)
