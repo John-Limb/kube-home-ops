@@ -31,9 +31,9 @@ spec:
       apiversion: externaldns.k8s.io/v1alpha1
       kind: DNSEndpoint
     interval: 2m
+    logLevel: debug
     provider: rfc2136
     extraArgs:
-     - --log-level=debug
      - --rfc2136-host=192.168.1.10
      - --rfc2136-port=53
      - --rfc2136-zone=${SECRET_INT_DOMAIN}
