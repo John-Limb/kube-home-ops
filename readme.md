@@ -6,6 +6,9 @@
 
 ## Operations for my home k3S cluster
 
+[![Datree Policy Check](https://github.com/John-Limb/kube-home-ops/actions/workflows/datree.yml/badge.svg)](https://github.com/John-Limb/kube-home-ops/actions/workflows/datree.yml)
+[![Lint Code Base](https://github.com/John-Limb/kube-home-ops/actions/workflows/super-linter.yml/badge.svg)](https://github.com/John-Limb/kube-home-ops/actions/workflows/super-linter.yml)
+
 ## :closed_book: Overview
 
 This repository contains everything I use to maintain the devices and clusters in my home, along with application deployment into my kubernetes cluster. For more
