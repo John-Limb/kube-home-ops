@@ -5,6 +5,7 @@ metadata:
   namespace: longhorn-system
   annotations: 
     kubernetes.io/ingress.class: traefik-external
+    external-dns.home.arpa: true
 spec:
   entryPoints:
     - websecure
