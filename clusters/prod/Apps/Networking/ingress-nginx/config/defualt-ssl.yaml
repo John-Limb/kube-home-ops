@@ -11,5 +11,4 @@ spec:
     kind: ClusterIssuer
   commonName: ${SECRET_INT_CERT_DOMAIN}
   dnsNames:
-    - ${SECRET_INT_DOMAIN}
     - "*.${SECRET_INT_DOMAIN}"
