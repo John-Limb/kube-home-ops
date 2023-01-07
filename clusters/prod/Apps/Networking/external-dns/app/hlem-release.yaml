@@ -40,7 +40,4 @@ spec:
      - --rfc2136-tsig-axfr # needed to enable zone transfers, which is required for deletion of records.
      - --domain-filter=${SECRET_INT_DOMAIN}
      - --source=ingress
-     - --registry=txt
-     - --txt-prefix=external-dns-
-     - --txt-owner-id=k8s
      - --annotation-filter=external-dns.home.arpa/enabled in (true)
