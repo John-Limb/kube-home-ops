@@ -4,5 +4,6 @@ resources:
 - ./metallb/ks.yaml
 - ./traefik/ks.yaml
 - ./external-dns/ks.yaml
+- ./ingress-nginx/ks.yaml
 - namespace.yaml
 - tailscale

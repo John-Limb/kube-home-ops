@@ -1,0 +1,15 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: default-ssl
+  namespace: networking-system
+spec:
+  secretName: default-ssl
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: ${SECRET_INT_CERT_DOMAIN}
+  dnsNames:
+    - ${SECRET_INT_CERT_DOMAIN}
+    - "*.${SECRET_INT_CERT_DOMAIN}"
