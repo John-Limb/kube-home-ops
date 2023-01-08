@@ -1,0 +1,26 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: uptimekuma-ingress
+  namespace: monitoring
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: uptime.${SECRET_INT_DOMAIN}
+spec:
+  ingressClassName: nginx
+  tls:
+   - hosts:
+     - uptime.${SECRET_INT_DOMAIN}
+     secretName: prod-uptime-${SECRET_INT_CERT_DOMAIN}
+  rules:
+    - host: "uptime.${SECRET_INT_DOMAIN}"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: uptime-kuma-service
+                port:
+                  number: 3001
+
