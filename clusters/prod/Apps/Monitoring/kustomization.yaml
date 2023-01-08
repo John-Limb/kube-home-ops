@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
 - Notifications
 - namespace.yaml
-- uptimekuma
+- uptimekuma/ks.yaml
