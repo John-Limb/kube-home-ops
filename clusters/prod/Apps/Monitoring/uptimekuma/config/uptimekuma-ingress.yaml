@@ -28,7 +28,7 @@ spec:
     kind: Certificate
     metadata:
       name: uptime.${SECRET_INT_DOMAIN}
-      namespace: networking-system
+      namespace: monitoring
     spec:
       secretName: prod-uptime-${SECRET_INT_CERT_DOMAIN}
       issuerRef:
