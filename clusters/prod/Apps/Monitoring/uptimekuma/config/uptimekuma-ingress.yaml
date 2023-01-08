@@ -23,4 +23,17 @@ spec:
                 name: uptime-kuma-service
                 port:
                   number: 3001
-
+---
+    apiVersion: cert-manager.io/v1
+    kind: Certificate
+    metadata:
+      name: uptime.${SECRET_INT_DOMAIN}
+      namespace: uptimekuma
+    spec:
+      secretName: prod-uptime-${SECRET_INT_CERT_DOMAIN}
+      issuerRef:
+        name: letsencrypt-production
+        kind: ClusterIssuer
+      commonName: "uptime.${SECRET_INT_DOMAIN}"
+      dnsNames:
+      - "uptime.${SECRET_INT_DOMAIN}"
