@@ -1,0 +1,39 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grafana-ingress
+  namespace: monitoring
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: grafana.${SECRET_INT_DOMAIN}
+spec:
+  ingressClassName: nginx
+  tls:
+   - hosts:
+     - grafana.${SECRET_INT_DOMAIN}
+     secretName: prod-grafana-${SECRET_INT_CERT_DOMAIN}
+  rules:
+    - host: "grafana.${SECRET_INT_DOMAIN}"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: kube-prometheus-stack-grafana
+                port:
+                  number: 80
+---
+    apiVersion: cert-manager.io/v1
+    kind: Certificate
+    metadata:
+      name: grafana.${SECRET_INT_DOMAIN}
+      namespace: monitoring
+    spec:
+      secretName: prod-grafana-${SECRET_INT_CERT_DOMAIN}
+      issuerRef:
+        name: letsencrypt-production
+        kind: ClusterIssuer
+      commonName: "grafana.${SECRET_INT_DOMAIN}"
+      dnsNames:
+      - "grafana.${SECRET_INT_DOMAIN}"

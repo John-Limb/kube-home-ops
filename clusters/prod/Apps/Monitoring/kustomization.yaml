@@ -4,3 +4,4 @@ resources:
 - Notifications
 - namespace.yaml
 - uptimekuma/ks.yaml
+- kube-prometheus-stack/ks.yaml
