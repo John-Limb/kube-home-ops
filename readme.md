@@ -14,7 +14,7 @@
 This repository contains everything I use to maintain the devices and clusters in my home, along with application deployment into my kubernetes cluster. For more
 details, see the readme's in each folder.
 .
-* [Apps](clusers/prod/apps/) YAML files for configuation and deployment off applications into kubernetes
+* [Apps](clusers/prod/Apps/) YAML files for configuation and deployment off applications into kubernetes
 ## :computer: Gear  
 
 I try to run everything bare metal with virtual machines (running on Proxmox).
