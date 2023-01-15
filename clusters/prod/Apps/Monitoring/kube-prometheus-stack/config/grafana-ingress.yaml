@@ -6,7 +6,7 @@ metadata:
   namespace: monitoring
   annotations:
     external-dns.alpha.kubernetes.io/hostname: grafana.${SECRET_INT_DOMAIN}
-    hajimari.io/icon: simple-icons:Grafana
+    hajimari.io/icon: simple-icons:grafana
 spec:
   ingressClassName: nginx
   tls:

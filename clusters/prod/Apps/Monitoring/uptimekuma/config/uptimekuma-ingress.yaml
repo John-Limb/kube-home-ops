@@ -6,7 +6,7 @@ metadata:
   namespace: monitoring
   annotations:
     external-dns.alpha.kubernetes.io/hostname: uptime.${SECRET_INT_DOMAIN}
-    hajimari.io/icon: 'simple-icons:Utime Kuma'
+    hajimari.io/icon: simple-icons:uptimekuma
 spec:
   ingressClassName: nginx
   tls:
