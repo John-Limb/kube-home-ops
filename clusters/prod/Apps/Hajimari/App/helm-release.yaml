@@ -29,7 +29,7 @@ spec:
     env:
       TZ: ${TZ}
     hajimari:
-      title: hajimari
+      title: hajimari-${SECRET_INT_CERT_DOMAIN}
       darkTheme: lime
       alwaysTargetBlank: true
       showGreeting: true
@@ -46,6 +46,7 @@ spec:
           - monitoring
           - networking-system
           - longhorn-system
+      name: "home"
       customApps:
         - name: NAS
           url: http://192.168.1.100
@@ -54,11 +55,7 @@ spec:
         - name: Online
           links:
            - name: Discord
-             url: 'https://discord.com'
-           - name: Outlook
-             url: 'https://outlook.com'
-           - name: iCloud
-             url: 'https://icloud.com'  
+             url: 'https://discord.com' 
     persistence:
       data:
         enabled: true
