@@ -53,12 +53,12 @@ spec:
           - longhorn-system
       name: "V4d3r"
       customApps:
-      - group: Media
-         apps:
-          - name: Test
-            url: 'https://example.com'
-            icon: 'mdi:test-tube'
-            info: This is a test app
+        - group: Media
+          apps:
+            - name: Test
+              url: 'https://example.com'
+              icon: 'mdi:test-tube'
+              info: This is a test app
       globalBookmarks:
       - group: Communicate
         bookmarks:
