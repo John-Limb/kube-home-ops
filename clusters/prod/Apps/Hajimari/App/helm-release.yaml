@@ -29,14 +29,14 @@ spec:
     env:
       TZ: ${TZ}
     hajimari:
-      title: Apps
+      title: hajimari
       darkTheme: espresso
       alwaysTargetBlank: true
       showGreeting: true
       showAppGroups: true
       showAppStatus: true
-      showBookmarkGroups: false
-      showGlobalBookmarks: false
+      showBookmarkGroups: true
+      showGlobalBookmarks: true
       showAppUrls: false
       defaultEnable: true
       namespaceSelector:
