@@ -74,11 +74,17 @@ spec:
           - name: Slack
             url: 'https://slack.com/signin'
             icon: 'mdi:slack'
-      - group: Other
-        bookmarks:
           - name: GoogleDrive
             url: 'https://drive.google.com'
             icon: 'mdi:google-drive'
+      - group: Dev
+        bookmarks:
+          - name: AdGuard
+            url: 'https://adguard-dns.io/'
+            icon: 'mdi:server-security'
+          - name: Github
+            url: 'https://github.com'
+            icon: 'mdi:github'
     persistence:
       data:
         enabled: true
