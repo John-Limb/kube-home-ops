@@ -12,3 +12,30 @@
       commonName: "hajimari.${SECRET_INT_DOMAIN}"
       dnsNames:
       - "hajimari.${SECRET_INT_DOMAIN}"
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hajimari
+  namespace: default
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: hajimari.${SECRET_INT_DOMAIN}
+spec:
+  ingressClassName: nginx
+  tls:
+   - hosts:
+     - hajimari.${SECRET_INT_DOMAIN}
+     secretName: prod-hajimari-${SECRET_INT_CERT_DOMAIN}
+  rules:
+    - host: "hajimari.${SECRET_INT_DOMAIN}"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: hajimari
+                port:
+                  number: 3000
+
