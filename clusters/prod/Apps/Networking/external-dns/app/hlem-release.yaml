@@ -40,4 +40,3 @@ spec:
      - --rfc2136-insecure
      - --rfc2136-tsig-axfr # needed to enable zone transfers, which is required for deletion of records.
      - --domain-filter=${SECRET_INT_DOMAIN}
-     - --sources=ingress
