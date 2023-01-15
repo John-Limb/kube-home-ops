@@ -30,7 +30,7 @@ spec:
       TZ: ${TZ}
     hajimari:
       title: hajimari
-      darkTheme: espresso
+      darkTheme: lime
       alwaysTargetBlank: true
       showGreeting: true
       showAppGroups: true
@@ -38,7 +38,7 @@ spec:
       showBookmarkGroups: true
       showGlobalBookmarks: true
       showAppUrls: false
-      defaultEnable: true
+      defaultEnable: false
       namespaceSelector:
         matchNames:
           - default
