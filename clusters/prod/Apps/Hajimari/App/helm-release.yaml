@@ -46,6 +46,15 @@ spec:
           - monitoring
           - networking-system
           - longhorn-system
+      groups:
+        - name: Online
+          links:
+           - name: Discord
+             url: 'https://discord.com'
+           - name: Outlook
+             url: 'https://outlook.com'
+           - name: iCloud
+             url: 'https://icloud.com'  
     persistence:
       data:
         enabled: true
