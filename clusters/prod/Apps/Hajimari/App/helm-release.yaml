@@ -31,6 +31,11 @@ spec:
     hajimari:
       title: hajimari-${SECRET_INT_CERT_DOMAIN}
       darkTheme: lime
+      customThemes:
+       - name: Temp
+         backgroundColor: '#3a1c46'
+         primaryColor: '#ffffff'
+         accentColor: '#FF235A'
       alwaysTargetBlank: true
       showGreeting: true
       showAppGroups: true
@@ -46,16 +51,7 @@ spec:
           - monitoring
           - networking-system
           - longhorn-system
-      name: "home"
-      customApps:
-        - name: NAS
-          url: http://192.168.1.100
-          icon: nas
-      groups:
-        - name: Online
-          links:
-           - name: Discord
-             url: 'https://discord.com' 
+      name: "V4d3r"    
     persistence:
       data:
         enabled: true
