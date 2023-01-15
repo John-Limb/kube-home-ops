@@ -55,13 +55,14 @@ spec:
       customApps:
         - group: Media
           apps:
-            - name: Test
+            - name: Outlook
               url: 'https://outlook.com'
-              icon: 'mdi:MicrosoftOutlook'
+              icon: 'mdi:microsoft-outlook'
               info: outlook
-            - name: oneDrive
+            - name: OneDrive
               url: 'https://onedrive.live.com'
-              icon: 'mdi:MicrosoftOnedrive'
+              icon: 'mdi:microsoft-onedrive'
+              info: ondedrive
       globalBookmarks:
       - group: Communicate
         bookmarks:
