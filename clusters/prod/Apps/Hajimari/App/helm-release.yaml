@@ -46,6 +46,10 @@ spec:
           - monitoring
           - networking-system
           - longhorn-system
+      customApps:
+        - name: NAS
+          url: http://192.168.1.100
+          icon: nas
       groups:
         - name: Online
           links:
