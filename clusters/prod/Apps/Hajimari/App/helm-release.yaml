@@ -53,7 +53,7 @@ spec:
           - longhorn-system
       name: "V4d3r"
       customApps:
-        - group: Media
+        - group: O365
           apps:
             - name: Outlook
               url: 'https://outlook.com'
@@ -70,12 +70,15 @@ spec:
             url: 'https://discord.com'
           - name: Gmail
             url: 'http://gmail.com'
+            icon: 'mdi:gmail'
           - name: Slack
             url: 'https://slack.com/signin'
-      - group: Cloud
+            icon: 'mdi:slack'
+      - group: Other
         bookmarks:
           - name: GoogleDrive
             url: 'https://drive.google.com'
+            icon: 'mdi:google-drive'
     persistence:
       data:
         enabled: true
