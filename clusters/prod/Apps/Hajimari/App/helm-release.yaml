@@ -56,9 +56,12 @@ spec:
         - group: Media
           apps:
             - name: Test
-              url: 'https://example.com'
-              icon: 'mdi:test-tube'
-              info: This is a test app
+              url: 'https://outlook.com'
+              icon: 'mdi:MicrosoftOutlook'
+              info: outlook
+            - name: oneDrive
+              url: 'https://onedrive.live.com'
+              icon: 'mdi:MicrosoftOnedrive'
       globalBookmarks:
       - group: Communicate
         bookmarks:
@@ -71,7 +74,7 @@ spec:
       - group: Cloud
         bookmarks:
           - name: GoogleDrive
-            url: 'https://drive.google.com'  
+            url: 'https://drive.google.com'
     persistence:
       data:
         enabled: true
