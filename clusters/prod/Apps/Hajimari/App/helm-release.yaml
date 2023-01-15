@@ -68,6 +68,7 @@ spec:
         bookmarks:
           - name: Discord
             url: 'https://discord.com'
+            icon: 'simple-icons:Discord'
           - name: Gmail
             url: 'http://gmail.com'
             icon: 'mdi:gmail'
