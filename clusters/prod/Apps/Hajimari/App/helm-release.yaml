@@ -41,7 +41,7 @@ spec:
       showAppGroups: true
       showAppStatus: true
       showBookmarkGroups: true
-      showGlobalBookmarks: true
+      showGlobalBookmarks: false
       showAppUrls: false
       defaultEnable: true
       namespaceSelector:
@@ -51,7 +51,27 @@ spec:
           - monitoring
           - networking-system
           - longhorn-system
-      name: "V4d3r"    
+      name: "V4d3r"
+      customApps:
+      - group: Media
+         apps:
+          - name: Test
+            url: 'https://example.com'
+            icon: 'mdi:test-tube'
+            info: This is a test app
+      globalBookmarks:
+      - group: Communicate
+        bookmarks:
+          - name: Discord
+            url: 'https://discord.com'
+          - name: Gmail
+            url: 'http://gmail.com'
+          - name: Slack
+            url: 'https://slack.com/signin'
+      - group: Cloud
+        bookmarks:
+          - name: GoogleDrive
+            url: 'https://drive.google.com'  
     persistence:
       data:
         enabled: true
