@@ -31,7 +31,7 @@ spec:
   dependsOn:
     - name: apps-hajimari
   interval: 5m
-  path: "./clusters/prod/Apps/hajimari/config"
+  path: "./clusters/prod/Apps/Hajimari/config"
   prune: true
   sourceRef:
     kind: GitRepository
