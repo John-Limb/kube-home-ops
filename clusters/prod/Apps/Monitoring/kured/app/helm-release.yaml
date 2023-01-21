@@ -1,0 +1,32 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kured
+  namespace: monitoring
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: kured
+      version: 4.2.0
+      sourceRef:
+        kind: HelmRepository
+        name: kubereboot
+        namespace: flux-system
+  values:
+    updateStrategy: RollingUpdate
+    configuration:
+      timeZone: ${TZ}
+      startTime: "3:00"
+      endTime: "5:00"
+      preRebootNodeLabels: reboot=rebootrequired
+      postRebootNodeLabels: reboot=rebootnotneeded
+      drainTimeout: 20m
+      rebootDays: ["sun"]
+      messageTemplateDrain: "⏳ Draining node... %s"
+      messageTemplateReboot: "♻️ Node Rebooted... %s"
+      rebootCommand: "/usr/bin/systemctl reboot"
+      notifyUrl: ${SECRET_SLACK_URL_REBOOT}
+    metrics:
+      create: true
