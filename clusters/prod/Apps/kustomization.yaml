@@ -7,3 +7,4 @@ resources:
 - Networking
 - Monitoring
 - Reloader
+- Database
