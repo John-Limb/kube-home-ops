@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: postgres-v1-grafana-dashboard
-  namespace: database
+  namespace: monitoring
   labels:
     grafana_dashboard: "1"
 data:
