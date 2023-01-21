@@ -34,3 +34,5 @@ spec:
         memory: 150Mi
       limits:
         memory: 200Mi
+    podAnnotations:
+      configmap.reloader.stakater.com/reload: cnpg-controller-manager-config
