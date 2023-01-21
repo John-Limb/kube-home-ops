@@ -20,8 +20,8 @@ spec:
       timeZone: ${TZ}
       startTime: "3:00"
       endTime: "5:00"
-      preRebootNodeLabels: reboot=rebootrequired
-      postRebootNodeLabels: reboot=rebootnotneeded
+      preRebootNodeLabels: [reboot=rebootrequired]
+      postRebootNodeLabels: [reboot=rebootnotneeded]
       drainTimeout: 20m
       rebootDays: ["sun"]
       messageTemplateDrain: "⏳ Draining node... %s"
