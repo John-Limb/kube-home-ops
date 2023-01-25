@@ -1,0 +1,29 @@
+kind: Secret
+metadata:
+    name: postgres-superuser-secret
+    namespace: database
+    annotations:
+        reloader.stakater.com/match: "true"
+stringData:
+    password: ENC[AES256_GCM,data:BEMtdAc00iE=,iv:1fWFm/GgPVfwbcAPTDcxQ1D5hOL/JDhB9krv2JbEGEE=,tag:3kPG1s6XXOh/zEcwKY8vtw==,type:str]
+    username: ENC[AES256_GCM,data:cX0Qjg44RB0=,iv:pd+pYq1a2A/FewRUiC+LD4vdz7cpRy/6savh5S2H6dA=,tag:ihdIjCEJSfnP7RRs4dIx8A==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1a0q20utj6v2s7tajn7l8kwua0ga0aqple75mpvqfjt40t3za7fsqecmmxc
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBYeGtOKzJaVkRETmR5NGFU
+            MitRQzhITEpYbU5keWNXOHlzU2FrZXNCaGo4CktxUjBpUWtPZXpDOTYxMmhqa2w0
+            UjRQK0Z0WmUvUitPb2lweWN2M1R2OVEKLS0tIGRPT0dKSUVIK0V5NXYyZGRLcTB0
+            czdpNjU3Mm5KdEVDMlE2SmQwSGJPL1kKehoPrjKq8YEHZ/oTRcqQWAPwQZ9LXDVv
+            isnihygV4K/uzHuC+PpsuIzSHAd/S2SQvUo4/3wgglZqRr5nzClhLQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-01-24T18:31:45Z"
+    mac: ENC[AES256_GCM,data:F7ArWOZybsNjwNEuAVtc/dP2IqXTWDfl9WGBMKMPjrvr5hYKDFb6whr3P9OJMqMYThjz8nu7KXWF5/04mGyLvyVvocqT1GqthICZanfHIzBE7V7Y5EOXtA41fgfKyrBzYcUJoRcZnAExhlqDemxtcO7dwvXbodvWWW6OGOuyLxg=,iv:384Bbx2aPoQlfNuGc2VYm8tshrSi5s0kb+uwBS1PG8s=,tag:aEjePBtADAVnGqfImVqZrA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
