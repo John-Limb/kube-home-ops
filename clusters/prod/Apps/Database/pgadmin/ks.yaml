@@ -31,7 +31,7 @@ spec:
   dependsOn:
     - name: apps-pgadmin
   interval: 5m
-  path: "./clusters/prod/Apps/Datbase/pgadmin/config"
+  path: "./clusters/prod/Apps/Database/pgadmin/config"
   prune: true
   sourceRef:
     kind: GitRepository
