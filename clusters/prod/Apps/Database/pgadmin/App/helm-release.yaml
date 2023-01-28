@@ -21,8 +21,8 @@ spec:
     strategy:
       type: Recreate
     env:
-      email: ${PGADMIN_EMAIL}
-      password: ${PGADMIN_PASSWORD}
+      email: ${SECRET_MAIL_ADDR}
+      password: ${SECRET_PGADMIN_PASS}
     persistentVolume:
       enabled: true
       existingClaim: pgadmin
