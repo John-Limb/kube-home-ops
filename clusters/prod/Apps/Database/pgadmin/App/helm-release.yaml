@@ -26,3 +26,20 @@ spec:
     persistentVolume:
       enabled: true
       existingClaim: pgadmin
+    resources:
+      requests:
+        cpu: 15m
+        memory: 164M
+      limits:
+        memory: 236M
+    serverDefinitions:
+            enabled: true
+            servers:
+                core:
+                    Name: postgres
+                    Group: Servers
+                    Port: 5432
+                    Username: postgres
+                    Host: postgres.database.svc.cluster.local
+                    SSLMode: prefer
+                    MaintenanceDB: postgres
