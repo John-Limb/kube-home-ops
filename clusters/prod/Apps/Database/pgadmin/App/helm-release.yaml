@@ -35,8 +35,8 @@ spec:
     serverDefinitions:
             enabled: true
             servers:
-                core:
-                    Name: postgres
+                app-cluster:
+                    Name: app-cluster
                     Group: Servers
                     Port: 5432
                     Username: postgres
