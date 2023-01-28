@@ -40,6 +40,6 @@ spec:
                     Group: Servers
                     Port: 5432
                     Username: postgres
-                    Host: postgres.database.svc.cluster.local
+                    Host: app-cluster-any.database.svc.cluster.local
                     SSLMode: prefer
                     MaintenanceDB: postgres
