@@ -35,7 +35,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: pgadmin
+                name: pgadmin-pgadmin4
                 port:
-                  number: 3000
+                  number: 80
 
