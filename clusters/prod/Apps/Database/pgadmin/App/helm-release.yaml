@@ -1,0 +1,28 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: pgadmin
+  namespace: database
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: pgadmin4
+      version: 1.14.3
+      sourceRef:
+        kind: HelmRepository
+        name: runix
+        namespace: flux-system
+  values:
+    image:
+      repository: dpage/pgadmin4
+      tag: "6.19"
+    strategy:
+      type: Recreate
+    env:
+      email: ${PGADMIN_EMAIL}
+      password: ${PGADMIN_PASSWORD}
+    persistentVolume:
+      enabled: true
+      existingClaim: pgadmin

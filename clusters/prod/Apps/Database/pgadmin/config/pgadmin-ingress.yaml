@@ -1,0 +1,41 @@
+---
+    apiVersion: cert-manager.io/v1
+    kind: Certificate
+    metadata:
+      name: pgadmin.${SECRET_INT_DOMAIN}
+      namespace: database
+    spec:
+      secretName: prod-pgadmin-${SECRET_INT_CERT_DOMAIN}
+      issuerRef:
+        name: letsencrypt-production
+        kind: ClusterIssuer
+      commonName: "pgadmin.${SECRET_INT_DOMAIN}"
+      dnsNames:
+      - "pgadmin.${SECRET_INT_DOMAIN}"
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pgadmin
+  namespace: database
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: pgadmin.${SECRET_INT_DOMAIN}
+spec:
+  ingressClassName: nginx
+  tls:
+   - hosts:
+     - pgadmin.${SECRET_INT_DOMAIN}
+     secretName: prod-pgadmin-${SECRET_INT_CERT_DOMAIN}
+  rules:
+    - host: "pgadmin.${SECRET_INT_DOMAIN}"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: pgadmin
+                port:
+                  number: 3000
+
