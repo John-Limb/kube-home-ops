@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+- appdb-secret.yaml
 - pg-backup.yaml
 - pg-su.yaml
-- appdb-secret.yaml
