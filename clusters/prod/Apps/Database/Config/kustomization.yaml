@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - pg-backup.yaml
 - pg-su.yaml
+- appdb-secret.yaml
