@@ -29,8 +29,9 @@ spec:
       JVM_MAX_HEAP_SIZE: 1024M
     service:
       main:
+        annotations:
+          metallb.universe.tf/loadBalancerIPs: ${UNIFI_NETWORK_ADDR}
         type: LoadBalancer
-        loadBalancerIP: "${UNIFI_NETWORK_ADDR}"
         externalTrafficPolicy: Local
         ports:
           http:
