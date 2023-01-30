@@ -1,0 +1,41 @@
+---
+    apiVersion: cert-manager.io/v1
+    kind: Certificate
+    metadata:
+      name: unifi.${SECRET_INT_DOMAIN}
+      namespace: networking-system
+    spec:
+      secretName: prod-unifi-${SECRET_INT_CERT_DOMAIN}
+      issuerRef:
+        name: letsencrypt-production
+        kind: ClusterIssuer
+      commonName: "unifi.${SECRET_INT_DOMAIN}"
+      dnsNames:
+      - "unifi.${SECRET_INT_DOMAIN}"
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: unifi
+  namespace: networking-system
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: unifi.${SECRET_INT_DOMAIN}
+spec:
+  ingressClassName: nginx
+  tls:
+   - hosts:
+     - unifi.${SECRET_INT_DOMAIN}
+     secretName: prod-unifi-${SECRET_INT_CERT_DOMAIN}
+  rules:
+    - host: "unifi.${SECRET_INT_DOMAIN}"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: unifi
+                port:
+                  number: 8443
+
