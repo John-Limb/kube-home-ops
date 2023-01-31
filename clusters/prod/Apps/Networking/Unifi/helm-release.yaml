@@ -36,7 +36,6 @@ spec:
         externalTrafficPolicy: Local
         ports:
           http:
-            enabled: false
             port: 8443
             protocol: HTTPS
           controller:
@@ -48,7 +47,7 @@ spec:
             port: 8843
             protocol: HTTPS
           speedtest:
-            enabled: true
+            enabled: false
             port: 6789
             protocol: TCP
           stun:
