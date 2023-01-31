@@ -36,16 +36,13 @@ spec:
         externalTrafficPolicy: Local
         ports:
           http:
+            enabled: false
             port: 8443
             protocol: HTTPS
           controller:
             enabled: true
             port: 8080
             protocol: TCP
-          portal-http:
-            enabled: false
-            port: 8880
-            protocol: HTTP
           portal-https:
             enabled: false
             port: 8843
