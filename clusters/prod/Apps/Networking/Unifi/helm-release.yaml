@@ -30,7 +30,6 @@ spec:
     service:
       main:
         annotations:
-          metallb.universe.tf/loadBalancerIPs: ${UNIFI_NETWORK_ADDR}
           metallb.universe.tf/allow-shared-ip: unifi
         type: LoadBalancer
         loadBalancerIP: ${UNIFI_NETWORK_ADDR}
