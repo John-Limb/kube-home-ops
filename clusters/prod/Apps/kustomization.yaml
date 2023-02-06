@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - ./cert-manager/ks.yaml
 - ./Hajimari/ks.yaml
-- ./Media/immich/ks.yaml
+- Media
 - Storage
 - Networking
 - Monitoring
