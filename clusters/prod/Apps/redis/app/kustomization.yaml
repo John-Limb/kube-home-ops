@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
 - helm-release.yaml
 - helm-repository.yaml
-- grafana-dash.yaml
+- dashboard.yaml
