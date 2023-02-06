@@ -1,0 +1,44 @@
+---
+    apiVersion: cert-manager.io/v1
+    kind: Certificate
+    metadata:
+      name: immich.${SECRET_INT_DOMAIN}
+      namespace: media
+    spec:
+      secretName: prod-immich-${SECRET_INT_CERT_DOMAIN}
+      issuerRef:
+        name: letsencrypt-production
+        kind: ClusterIssuer
+      commonName: "immich.${SECRET_INT_DOMAIN}"
+      dnsNames:
+      - "immich.${SECRET_INT_DOMAIN}"
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: immich
+  namespace: media
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: immich.${SECRET_INT_DOMAIN}
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    hajimari.io/appName: "Immich"
+    hajimari.io/icon: heroicons:photo
+spec:
+  ingressClassName: nginx
+  tls:
+   - hosts:
+     - immich.${SECRET_INT_DOMAIN}
+     secretName: prod-immich-${SECRET_INT_CERT_DOMAIN}
+  rules:
+    - host: "immich.${SECRET_INT_DOMAIN}"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: immich
+                port:
+                  number: 8080
+
