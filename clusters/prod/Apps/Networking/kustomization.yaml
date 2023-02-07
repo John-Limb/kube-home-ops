@@ -7,4 +7,4 @@ resources:
 - ./ingress-nginx/ks.yaml
 - namespace.yaml
 - tailscale
-- ./unifi/ks/.yaml
+- ./unifi/ks.yaml
