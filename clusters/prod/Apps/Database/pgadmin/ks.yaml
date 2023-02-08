@@ -30,7 +30,7 @@ metadata:
 spec:
   dependsOn:
     - name: apps-pgadmin
-  interval: 5m
+  interval: 30m
   path: "./clusters/prod/Apps/Database/pgadmin/config"
   prune: true
   sourceRef:

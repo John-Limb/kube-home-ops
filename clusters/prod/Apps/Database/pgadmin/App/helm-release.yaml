@@ -19,7 +19,7 @@ spec:
       repository: dpage/pgadmin4
       tag: "6.19"
     strategy:
-      type: Recreate
+      type: RollingUpdate
     env:
       email: ${SECRET_MAIL_ADDR}
       password: ${SECRET_PGADMIN_PASS}
