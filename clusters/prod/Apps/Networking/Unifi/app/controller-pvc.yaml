@@ -6,7 +6,7 @@ metadata:
   namespace: networking-system
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 10Gi
