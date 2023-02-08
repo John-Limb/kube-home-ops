@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
 - Operator/Ks.yaml
 - Clusters/Ks.yaml
-- Config
+- Config/Ks.yaml
 - namespace.yaml
 - pgadmin/ks.yaml
