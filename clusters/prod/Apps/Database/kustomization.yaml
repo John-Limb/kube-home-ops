@@ -6,3 +6,4 @@ resources:
 - Config/Ks.yaml
 - namespace.yaml
 - pgadmin/ks.yaml
+- helm-repository.yaml
