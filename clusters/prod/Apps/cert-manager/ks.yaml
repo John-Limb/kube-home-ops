@@ -12,7 +12,7 @@ spec:
     name: flux-system
   interval: 30m
   dependsOn: 
-    - name: networking-system-traefik
+    - name: networking-system-ingress-nginx
   prune: false
   wait: true
   healthChecks:
