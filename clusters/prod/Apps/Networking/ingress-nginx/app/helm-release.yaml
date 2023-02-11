@@ -36,7 +36,6 @@ spec:
         - name: TZ
           value: "${TZ}"
       service:
-        ipFamilies: "IPV4"
         ipFamilyPolicy: "SingleStack"
         annotations:
           metallb.universe.tf/loadBalancerIPs: |-
