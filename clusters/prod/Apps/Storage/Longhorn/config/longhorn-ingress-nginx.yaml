@@ -23,4 +23,17 @@ spec:
                 name: longhorn-frontend
                 port:
                   number: 80
-
+---
+    apiVersion: cert-manager.io/v1
+    kind: Certificate
+    metadata:
+      name: longhorn.${SECRET_INT_DOMAIN}
+      namespace: longhorn-system
+    spec:
+      secretName: prod-longhorn-${SECRET_INT_CERT_DOMAIN}
+      issuerRef:
+        name: letsencrypt-production
+        kind: ClusterIssuer
+      commonName: "longhorn.${SECRET_INT_DOMAIN}"
+      dnsNames:
+      - "longhorn.${SECRET_INT_DOMAIN}"
