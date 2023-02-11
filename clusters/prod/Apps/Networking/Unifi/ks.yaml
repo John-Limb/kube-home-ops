@@ -27,7 +27,7 @@ metadata:
     substitution.flux.home.arpa/enabled: "true"
 spec:
   dependsOn:
-    - name: networking-system-Unifi
+    - name: networking-system-unifi
   interval: 5m
   path: "./clusters/prod/Apps/Networking/Unifi/config"
   prune: true
