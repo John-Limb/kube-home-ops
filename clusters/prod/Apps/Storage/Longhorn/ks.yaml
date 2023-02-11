@@ -25,7 +25,7 @@ metadata:
 spec:
   dependsOn:
     - name: longhorn-system-longhorn
-  interval: 5m
+  interval: 30m
   path: "./clusters/prod/Apps/Storage/Longhorn/config"
   prune: true
   sourceRef:

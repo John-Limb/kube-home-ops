@@ -27,7 +27,7 @@ metadata:
 spec:
   dependsOn:
     - name: networking-system-ingress-nginx
-  interval: 5m
+  interval: 30m
   path: "./clusters/prod/Apps/Networking/ingress-nginx/config"
   prune: true
   sourceRef:

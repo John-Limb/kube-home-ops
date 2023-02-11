@@ -21,7 +21,7 @@ metadata:
 spec:
   dependsOn:
     - name: networking-system-metallb
-  interval: 5m
+  interval: 30m
   path: "./clusters/prod/Apps/Networking/metallb/config"
   prune: true
   sourceRef:

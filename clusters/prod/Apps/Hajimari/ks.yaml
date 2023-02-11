@@ -25,7 +25,7 @@ metadata:
 spec:
   dependsOn:
     - name: apps-hajimari
-  interval: 5m
+  interval: 30m
   path: "./clusters/prod/Apps/Hajimari/config"
   prune: true
   sourceRef:

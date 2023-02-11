@@ -28,7 +28,7 @@ metadata:
 spec:
   dependsOn:
     - name: app-cert-manager
-  interval: 5m
+  interval: 30m
   path: "./clusters/prod/Apps/cert-manager/config"
   prune: true
   sourceRef:

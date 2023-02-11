@@ -28,7 +28,7 @@ metadata:
 spec:
   dependsOn:
     - name: networking-system-unifi
-  interval: 5m
+  interval: 30m
   path: "./clusters/prod/Apps/Networking/Unifi/config"
   prune: true
   sourceRef:

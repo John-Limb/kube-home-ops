@@ -5,7 +5,7 @@ metadata:
   name: tailscale-relay
   namespace: networking-system
 spec:
-  interval: 5m
+  interval: 30m
   chart:
     spec:
       chart: tailscale-relay
