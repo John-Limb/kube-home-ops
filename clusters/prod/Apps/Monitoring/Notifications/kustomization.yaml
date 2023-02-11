@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - slack-alert-definition.yaml
 - slack-provider.yaml
+- slack-url.yaml
