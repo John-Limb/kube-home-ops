@@ -25,6 +25,3 @@ spec:
     fullnameOverride: reloader
     reloader:
       reloadStrategy: annotations
-      podMonitor:
-        enabled: true
-        namespace: default
