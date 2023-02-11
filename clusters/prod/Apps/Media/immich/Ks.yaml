@@ -17,6 +17,4 @@ spec:
     name: flux-system
   dependsOn:
     - name: longhorn-system-longhorn
-    - name: apps-pgadmin
-    - name: app-cert-manager
   path: ./clusters/prod/Apps/Media/immich
