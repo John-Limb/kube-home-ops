@@ -13,11 +13,6 @@ spec:
   interval: 30m
   prune: false
   wait: true
-  healthChecks:
-    - apiVersion: helm.toolkit.fluxcd.io/v2beta1
-      kind: HelmRelease
-      name: hajimari
-      namespace: default
   timeout: 5m
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
