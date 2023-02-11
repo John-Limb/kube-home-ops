@@ -9,4 +9,4 @@ resources:
 - Monitoring
 - Reloader
 - Database
-- redis
+- ./redis/ks.yaml
