@@ -24,6 +24,12 @@ spec:
       retries: 3
   values:
     controller:
+      replicaCount: 2
+      readinessProbe:
+        httpGet:
+          path: "/healthz"
+          port: 10254
+          scheme: "HTTP"
       extraEnvs:
         - name: TZ
           value: "${TZ}"
@@ -54,7 +60,7 @@ spec:
           networking-system/default-ssl
       resources:
         requests:
-          cpu: 10m
+          cpu: 20m
           memory: 250Mi
         limits:
           memory: 500Mi
