@@ -1,0 +1,28 @@
+apiVersion: v1
+stringData:
+    password: ENC[AES256_GCM,data:czTW4s6KQA==,iv:9YEXBpB7iB7rQfg7FZ7FGTuLTLBOgMUPju99I/qsHJ8=,tag:sSwJA3kSCwt4XmlgV4fNqw==,type:str]
+    username: ENC[AES256_GCM,data:DOtW,iv:N9lFNZzDyYV3YAyJTVHy77irwMUxTJcjYEqm3gm9gU8=,tag:V4i4Qq9KFT/dZunWbChqwA==,type:str]
+kind: Secret
+metadata:
+    name: appdb-user-secret
+    namespace: database
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1a0q20utj6v2s7tajn7l8kwua0ga0aqple75mpvqfjt40t3za7fsqecmmxc
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBQVmlRNTE0KzhUNnNGbzlY
+            S3lYVCtkYkhsYVVtRG56TGlCcWU1blh1Y1g0CldtZ0VLL2g1a3V4ZHhvS3Z4QzFB
+            S0hicHlGSUpwU0hRMm5ZZEYwTy91M3MKLS0tIEtzVjZFRHVORXVrY0xPV29JSTRx
+            QU9taHJPM2srTXY0bWhiL1ZHQjFBQVEKO2MI137SOmyBvn6WyUhvj4UmK414DR1P
+            G/S2Om/Dxi6OxXH1XuphbpGRG7SgPVQcBr1xe1Ym9d2vl8h2jCk73g==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-02-12T11:28:25Z"
+    mac: ENC[AES256_GCM,data:BVnxWIOQtAhJq/WcysS35gxge9gMgtISvl6bbROIa/DtXn+fANeo64mpXTePQlIMIbjCQNqt37xyMhsS4Rw2og6EwALjYnL8P7mFTta1b+Kd00eztfJCf3U86+ZQfHVbWiReYP15l4TvbJoherZRxgvYUZthDkT9dD7tKeUSNcs=,iv:qFtY2aS1xR4ciQceKJZ89Amdc4FzxjMS70VGrct4f7A=,tag:Emx1fkEAYROURSyccK9Abw==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3

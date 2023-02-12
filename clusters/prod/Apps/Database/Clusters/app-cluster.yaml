@@ -22,7 +22,7 @@ spec:
        database: app
        owner: app
        secret:
-        name: appdb-secret
+        name: appdb-user-secret
  monitoring:
    disableDefaultQueries: false
    enablePodMonitor: true
