@@ -35,8 +35,6 @@ spec:
       repository: ghcr.io/immich-app/immich-proxy
       tag: v1.43.1
     envFrom:
-      - secretRef:
-          name: immich-secret
       - configMapRef:
           name: immich-configmap
     service:
