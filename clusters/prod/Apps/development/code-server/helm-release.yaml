@@ -25,5 +25,3 @@ spec:
     extraVars:
       - name: DISABLE_TELEMETRY
         value: "true"
-    extraArgs:
-      - --password ${SECRET_CODE_PASS}
