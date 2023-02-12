@@ -2,6 +2,7 @@ apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 metadata:
   name: cluster-app-db
+  namespace: database
 spec:
   instances: 1
   superuserSecret:
