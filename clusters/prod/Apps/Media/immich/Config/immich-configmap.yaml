@@ -6,6 +6,7 @@ metadata:
   namespace: media
 data:
   DB_PORT: "5432"
+  DB_HOSTNAME: app-cluster-rw.database.svc.cluster.local
   DISABLE_REVERSE_GEOCODING: "true"
   ENABLE_MAPBOX: "false"
   LOG_LEVEL: verbose
