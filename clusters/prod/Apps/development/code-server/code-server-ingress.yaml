@@ -1,0 +1,41 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: code-ingress
+  namespace: development
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: code.${SECRET_INT_DOMAIN}
+    hajimari.io/icon: simple-icons:Visual Studio Code
+    hajimari.io/enable: "true"
+spec:
+  ingressClassName: nginx
+  tls:
+   - hosts:
+     - code.${SECRET_INT_DOMAIN}
+     secretName: prod-code-${SECRET_INT_CERT_DOMAIN}
+  rules:
+    - host: "code.${SECRET_INT_DOMAIN}"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: code-server
+                port:
+                  number: 80
+---
+    apiVersion: cert-manager.io/v1
+    kind: Certificate
+    metadata:
+      name: code.${SECRET_INT_DOMAIN}
+      namespace: development
+    spec:
+      secretName: prod-code-${SECRET_INT_CERT_DOMAIN}
+      issuerRef:
+        name: letsencrypt-production
+        kind: ClusterIssuer
+      commonName: "code.${SECRET_INT_DOMAIN}"
+      dnsNames:
+      - "code.${SECRET_INT_DOMAIN}"

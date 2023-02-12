@@ -10,3 +10,4 @@ resources:
 - Reloader
 - Database
 - ./redis/ks.yaml
+- development
