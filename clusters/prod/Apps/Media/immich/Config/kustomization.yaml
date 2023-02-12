@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - immich-configmap.yaml
 - immich-pvc.yaml
+- immich-ingress.yaml
