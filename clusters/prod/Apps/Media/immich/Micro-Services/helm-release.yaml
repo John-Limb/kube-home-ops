@@ -25,8 +25,6 @@ spec:
       retries: 3
   uninstall:
     keepHistory: false
-  dependsOn:
-    - name: immich-server
   values:
     controller:
       annotations:
