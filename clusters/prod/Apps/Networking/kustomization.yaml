@@ -6,4 +6,3 @@ resources:
 - ./ingress-nginx/ks.yaml
 - namespace.yaml
 - tailscale
-- ./Unifi/ks.yaml
