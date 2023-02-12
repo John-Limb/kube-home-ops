@@ -1,0 +1,20 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: prod-apps-cluster
+spec:
+  instances: 1
+  superuserSecret:
+    name: prod-superuser-secret
+  bootstrap:
+    initdb:
+      database: prod-app
+      owner: app
+      secret:
+        name: prod-app-secret
+      postInitSQL:
+         - CREATE DATABASE IF NOT EXISTS immich
+         - CREATE USER IF NOT EXISTS immich with encrypted password '${SECRET_IMMICH_DB_PASS}'
+         - GRANT ALL privileges on database immich to immich
+  storage:
+    size: 10Gi
