@@ -13,4 +13,4 @@ spec:
       secret:
         name: app-secret
   storage:
-    size: 1Gi
+    size: 10Gi
