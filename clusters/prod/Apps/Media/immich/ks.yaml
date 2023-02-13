@@ -24,7 +24,7 @@ metadata:
   labels:
     substitution.flux.home.arpa/enabled: "true"
 spec:
-  path: ./clusters/prod/Apps/Media/immich
+  path: ./clusters/prod/Apps/Media/immich/app
   dependsOn:
     - name: apps-immich-config
   prune: true

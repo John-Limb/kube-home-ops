@@ -22,7 +22,7 @@ spec:
               service:
                 name: immich-server
                 port:
-                  number: 3001
+                  number: 3000
 ---
     apiVersion: cert-manager.io/v1
     kind: Certificate
