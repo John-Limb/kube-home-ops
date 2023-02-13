@@ -20,7 +20,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: immich-server
+                name: immich-web
                 port:
                   number: 3000
 ---
