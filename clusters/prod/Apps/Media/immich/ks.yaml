@@ -28,6 +28,7 @@ spec:
   dependsOn:
     - name: apps-immich-config
   prune: true
+  wait: true
   sourceRef:
     kind: GitRepository
     name: flux-system
