@@ -5,3 +5,4 @@ resources:
 - immich-pvc.yaml
 - immich-secret.yaml
 - immich-ingress.yaml
+- helm-repository.yaml

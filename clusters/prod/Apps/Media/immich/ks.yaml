@@ -1,5 +1,19 @@
 ---
-# yaml-language-server: $schema=https://kubernetes-schemas.devbu.io/kustomization_v1beta2.json
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: apps-immich-config
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: longhorn-system-longhorn
+  interval: 30m
+  path: "./clusters/prod/Apps/Media/immich/config"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
@@ -9,6 +23,8 @@ metadata:
     substitution.flux.home.arpa/enabled: "true"
 spec:
   path: ./clusters/prod/Apps/Media/immich
+  dependsOn:
+    - name: apps-immich-config
   prune: true
   sourceRef:
     kind: GitRepository
