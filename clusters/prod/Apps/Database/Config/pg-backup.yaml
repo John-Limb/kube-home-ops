@@ -5,7 +5,7 @@ metadata:
   name: pg-backup
   namespace: database
 spec:
-  schedule: "@weekly"
+  schedule: "@daily"
   backupOwnerReference: self
   cluster:
     name: app-cluster
