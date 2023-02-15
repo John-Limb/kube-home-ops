@@ -9,6 +9,11 @@ metadata:
     nginx.ingress.kubernetes.io/configuration-snippet: |
       rewrite /api/(.*) /$1 break;
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "128k"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-write-timeout: "600"
+    hajimari.io/appName: Immich
+    hajimari.io/icon: heroicons:photo
 spec:
   ingressClassName: nginx
   tls:
@@ -17,14 +22,22 @@ spec:
      secretName: prod-immich-${SECRET_INT_CERT_DOMAIN}
   rules:
     - host: "immich.${SECRET_INT_DOMAIN}"
-      paths:
-        - path: /
-          pathType: Prefix
-        - path: /api
-          pathType: Prefix
-          service:
-            name: immich-server
-            port: 3001
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: immich-web
+                port:
+                  number: 3000
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: immich-web
+                port:
+                  number: 3000
 ---
     apiVersion: cert-manager.io/v1
     kind: Certificate
