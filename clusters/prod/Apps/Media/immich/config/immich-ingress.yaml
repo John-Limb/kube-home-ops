@@ -17,17 +17,15 @@ spec:
      secretName: prod-immich-${SECRET_INT_CERT_DOMAIN}
   rules:
     - host: "immich.${SECRET_INT_DOMAIN}"
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-          - path: /api
-            pathType: Prefix
-            backend:
-              service:
-                name: immich-web
-                port:
-                  number: 3000
+      paths:
+        - path: /
+          pathType: Prefix
+        - path: /api
+          pathType: Prefix
+          service:
+            name: immich-web
+            port:
+              number: 3000
 ---
     apiVersion: cert-manager.io/v1
     kind: Certificate
