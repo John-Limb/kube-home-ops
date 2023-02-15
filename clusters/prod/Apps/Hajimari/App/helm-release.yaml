@@ -47,6 +47,8 @@ spec:
       namespaceSelector:
         matchNames:
           - default
+          - media
+          - databases
           - flux-system
           - monitoring
           - networking-system
