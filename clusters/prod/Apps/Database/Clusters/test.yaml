@@ -5,7 +5,7 @@ data:
 kind: Secret
 metadata:
     name: aws-creds-backup
-    namespace: flux-system
+    namespace: database
 sops:
     kms: []
     gcp_kms: []
@@ -21,8 +21,8 @@ sops:
             ZEFmZEtMUDBERTZEcVBsc3JuRG1ObkkKGymgbWxn2HQjM79KtI1xxVLwzbgXL4Eg
             VZtlhOZY3dEhxcOa5iOwg7plaLj1aV5nofc8zkDONgwIgCY1O05w/g==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-02-15T21:57:00Z"
-    mac: ENC[AES256_GCM,data:RGt416/5mo3MEyp87G+cmDrpJ1P31MZlI41YZOJ8D9UxQtzEVgLarHgxD1nM7e/TQVO1D9r9ngNGkjB8NFptm98HXhtaAtIpuJvHSkGLUbCGOmvU0hfktDhjg+rDsACiTJM/5tv1tHaKInYpP0sFABTEqBVFUaKxMORwWu3906k=,iv:JfEdRgYsTE8l7tTCP7yDooYEqIOHWa/y6xN6xnmp0x8=,tag:/zeT+YcfdpsWTH5FiEjDfg==,type:str]
+    lastmodified: "2023-02-15T22:30:33Z"
+    mac: ENC[AES256_GCM,data:uGqFcCeIDQGqivYvPhObEPN9z2Fj+plkcoCEHM/qdWg7IXbYMiZWz4rXxdTS/lnHThED7U+DeoZRNTRmDUxecxTod+IzkTTTMxQIHWGlqTpJKjF8LBcLw51lUSULJR9wJsrjnNteP96BpOtDErQxzDuQV+ib1zxs5/KL5P8WQdw=,iv:7sjLrcqStjpvbkKY8dhtxw9yI3Hyj64jh1dqkhPSaRY=,tag:Wy09FvepjW+CV3mrpoCLQA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.7.3
