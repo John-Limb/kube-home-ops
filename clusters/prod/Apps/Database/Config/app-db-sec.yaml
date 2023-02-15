@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  password: RTk0NGRhbA==
+  username: YWRtaW4=
+kind: Secret
+metadata:
+  name: appdb-user-secret
+  namespace: database
