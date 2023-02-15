@@ -36,8 +36,8 @@ spec:
      destinationPath: "S3://${SECRET_AWS_BUCKET}@eu-west-2/"
      s3Credentials:
        accessKeyId:
-         key: aws-creds-backup
-         name: AWS_ACCESS_KEY_ID
+         name: aws-creds-backup
+         key: AWS_ACCESS_KEY_ID
        secretAccessKey:
-         key: aws-creds-backup
-         name: AWS_SECRET_ACCESS_KEY
+         name: aws-creds-backup
+         key: AWS_SECRET_ACCESS_KEY
