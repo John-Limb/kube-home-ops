@@ -4,8 +4,8 @@ metadata:
     name: aws-creds-backup
     namespace: database
 data:
-    AWS_ACCESS_KEY_ID: ENC[AES256_GCM,data:ddPiv2fy0DMG0uPHZ1ltk3P3X7/VNKdziJhdHw==,iv:A/3VMj2V2q/grNTVZXmBNVA4XOo462MiwYUxooqTIMk=,tag:6m46uHESeBM/vRgim2bzZg==,type:str]
-    AWS_SECRET_ACCESS_KEY: ENC[AES256_GCM,data:CcaykvwqJJzmFlsIKTPH75dUHzgnrc4r2BWPmE1Mm8acJPzvmewzjfRBI7NkJCoIZZ8vNjl0OjQ=,iv:MejCsBiZK3RZGofMLNHPc15XmpmT3dLq01ZP9/012aQ=,tag:6qtjA+JTQqKchTkHFog+nA==,type:str]
+    AWS_ACCESS_KEY_ID: ENC[AES256_GCM,data:2xqGmzJwbJ4ZSr2P3vbxv6JOAWYA21dOkMmK,iv:KiBeQXobz4UPbsVERaaQdVbYqWXxm7BxJ2Lc5ZJ3maE=,tag:ZMgoHt31za7fN9dbASgtAA==,type:str]
+    AWS_SECRET_ACCESS_KEY: ENC[AES256_GCM,data:bD1klFSaN+6W88QlUMnQwbpkF2elPigzs7xHnT5lW1qZY9GfD+su3sTkrHrId9uNFqmHSD59,iv:NNVlZxDH2rfbmgyW/bskXhHgnfY7b8qeRpuntI82vFk=,tag:EUxW/z6dZRH3j7ErAxHO/A==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -21,8 +21,8 @@ sops:
             QXBkMUdkWElXeFZERzN0dU5ydUduSnMKvRSgQXtoztHTk8unD2b2KAWibwnvjnmH
             uxPuhEKg8ICBmSxo8zbBMPPACasO04mf+Rb01icrcUBIKQQ+WaCkBg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-02-15T20:28:26Z"
-    mac: ENC[AES256_GCM,data:EvV7K/KDg3zQjYUMU6aU22B3bd1g4DxCftx2T5mUT/uRMR1cb3WPEYA4R2KGK7EhjrbAdIgjaOgNOUcKQxTb2Z9UdFBifJ62s7l0ahutfPxCLsyqAiCh82hkT3lJ/LdEZr0mC1mlmxG/JTv/S95Fu+kG5Zzl3lgAJqCXuZUssH4=,iv:IIQ3kmCDoButaO/LAeePgtQn1dMdljyYjFKtTXloz9w=,tag:BCjplto0tGel7c9OIpULkA==,type:str]
+    lastmodified: "2023-02-15T20:33:36Z"
+    mac: ENC[AES256_GCM,data:qCrZQ+A2xaYzP4L+mzRMdm8r7/SRcopIfWpCOj/Cz1x+DwPuianQcGUr3Isx1tR1kCSg6Op+N5/A4YpWyM3Uv6rofBitDdSNUKN8pAOHLB0NvpOlETcdyjurO8cpGLFJ0yZr3VyHkP5oH5Rd2OFUjFpa7D3fO5HES8nuEoLgaiE=,iv:XpKPKUGRXa+4qxgizB7OeiR22GsZE6rAblcA+HojQj0=,tag:PhiUzJRgEDWCfM2Mv4T3fg==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.7.3
