@@ -28,16 +28,16 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: immich-web
+                name: immich-server
                 port:
-                  number: 3000
+                  number: 3001
           - path: /api
             pathType: Prefix
             backend:
               service:
-                name: immich-web
+                name: immich-server
                 port:
-                  number: 3000
+                  number: 3001
 ---
     apiVersion: cert-manager.io/v1
     kind: Certificate
