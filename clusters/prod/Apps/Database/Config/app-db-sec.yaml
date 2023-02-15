@@ -1,7 +1,7 @@
 apiVersion: v1
 data:
   password: RTk0NGRhbA==
-  username: YWRtaW4=
+  username: YXBw
 kind: Secret
 metadata:
   name: appdb-user-secret
