@@ -1,0 +1,28 @@
+apiVersion: v1
+data:
+    AWS_ACCESS_KEY_ID: ENC[AES256_GCM,data:+5nes3bVhjwYjzE+pHvusEpjGzzNT28PTdVUBg==,iv:F3TV+B1lOL4UG3Dj/Dku6MixJvgdvY78e3Gc5rVf+AA=,tag:H30wmTuvwWJe1kf41G3XdQ==,type:str]
+    AWS_SECRET_ACCESS_KEY: ENC[AES256_GCM,data:udzqcTr+IgDpBcz0op67FyjSzHRkL7HrgarvFjmruQuUkVG8SlJK/OQ92fHsLF1zfHEN29jxFKs=,iv:jcbZI1fl2rpfEhrD2bs2UOGYK4CqQi4hQYR2owYapQE=,tag:o9yHYOWsuFPVr2IxPiTxJA==,type:str]
+kind: Secret
+metadata:
+    name: aws-creds-backup
+    namespace: flux-system
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1a0q20utj6v2s7tajn7l8kwua0ga0aqple75mpvqfjt40t3za7fsqecmmxc
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAzRVpXREpFajFkMjFpTzBy
+            cVM2ekU3bG5TTjBKVUZqbzdVUHQ1TVlXaGc4CnNiT1JjajJKVkN1Vlo1QmU2QVZU
+            S2lYUlNlcEY1UW1aR1ZBMUJaeURWSDgKLS0tIHpQaSs0dkQrc0YxanBwaU9NWmdF
+            ZEFmZEtMUDBERTZEcVBsc3JuRG1ObkkKGymgbWxn2HQjM79KtI1xxVLwzbgXL4Eg
+            VZtlhOZY3dEhxcOa5iOwg7plaLj1aV5nofc8zkDONgwIgCY1O05w/g==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-02-15T21:57:00Z"
+    mac: ENC[AES256_GCM,data:RGt416/5mo3MEyp87G+cmDrpJ1P31MZlI41YZOJ8D9UxQtzEVgLarHgxD1nM7e/TQVO1D9r9ngNGkjB8NFptm98HXhtaAtIpuJvHSkGLUbCGOmvU0hfktDhjg+rDsACiTJM/5tv1tHaKInYpP0sFABTEqBVFUaKxMORwWu3906k=,iv:JfEdRgYsTE8l7tTCP7yDooYEqIOHWa/y6xN6xnmp0x8=,tag:/zeT+YcfdpsWTH5FiEjDfg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
