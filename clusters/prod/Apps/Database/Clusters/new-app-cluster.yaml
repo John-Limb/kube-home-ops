@@ -33,7 +33,7 @@ spec:
  backup:
    retentionPolicy: "10d"
    barmanObjectStore:
-     destinationPath: "S3://${SECRET_AWS_BUCKET}@eu-west-2/"
+     destinationPath: "S3://${SECRET_AWS_POSTGRES_BUCKET}"
      s3Credentials:
        accessKeyId:
          name: aws-creds-backup
