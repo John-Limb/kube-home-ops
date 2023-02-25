@@ -10,6 +10,11 @@
    "username": "Morpheus[bot]",
    "dependencyDashboardTitle": "🤖 Renovate Dashboard",
    "rebaseWhen": "conflicted",
+   "schedule": [
+    "after 10pm every weekday",
+    "before 6am every weekday",
+    "every weekend"
+  ],
    "flux": {
      fileMatch: ["clusters/prod/.+\\.ya?ml$"],
   },
