@@ -14,7 +14,7 @@ spec:
         kind: HelmRepository
         name: mvisonneau
         namespace: flux-system
-      interval: 5m
+      interval: 30m
   values:
     image:
       repository: docker.io/mvisonneau/tailscale
