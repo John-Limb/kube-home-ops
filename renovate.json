@@ -4,7 +4,7 @@
     "config:base",
     ":dependencyDashboard"
   ],
-   "prHourlyLimit": 6,
+   "prHourlyLimit": 10,
    "timezone": "Europe/London",
    "platform": "github",
    "username": "Morpheus[bot]",
