@@ -1,7 +1,22 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
+    ":dependencyDashboard"
   ],
-   "prHourlyLimit": 6
+   "prHourlyLimit": 6,
+   "timezone": "Europe/London",
+   "platform": "github",
+   "username": "Morpheus[bot]",
+   "dependencyDashboardTitle": "🤖 Renovate Dashboard",
+   "rebaseWhen": "conflicted",
+   "flux": {
+     fileMatch: ["clusters/prod/.+\\.ya?ml$"],
+  },
+  "helm-values": {
+     fileMatch: ["Clusters/prod/Apps/.+\\.ya?ml$"],
+  },
+  "kubernetes": {
+     fileMatch: ["Clusters/prod/Apps/.+\\.ya?ml$"]
+  }
 }
