@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: tailscale-relay
-      version: 0.1.13
+      version: 0.2.1
       sourceRef:
         kind: HelmRepository
         name: mvisonneau
@@ -18,7 +18,7 @@ spec:
   values:
     image:
       repository: docker.io/mvisonneau/tailscale
-      tag: 'v1.36.1'
+      tag: v1.36.1
     config:
       variables:
         TAILSCALE_ADVERTISE_ROUTES: "192.168.1.0/24,192.168.2.0/24,192.168.0.0/24"
