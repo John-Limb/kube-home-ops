@@ -19,9 +19,9 @@
      fileMatch: ["clusters/prod/.+\\.ya?ml$"],
   },
   "helm-values": {
-     fileMatch: ["Clusters/prod/Apps/.+\\.ya?ml$"],
+     fileMatch: ["clusters/prod/Apps/.+\\.ya?ml$"],
   },
   "kubernetes": {
-     fileMatch: ["Clusters/prod/Apps/.+\\.ya?ml$"]
+     fileMatch: ["clusters/prod/Apps/.+\\.ya?ml$"]
   }
 }
