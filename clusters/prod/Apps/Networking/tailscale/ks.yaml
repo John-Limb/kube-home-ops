@@ -3,6 +3,8 @@ kind: Kustomization
 metadata:
   name: networking-system-tailscale
   namespace: flux-system
+  labels:
+    substitution.flux.home.arpa/enabled: "true"
 spec:
   path: ./clusters/prod/Apps/Networking/tailscale/app
   sourceRef:
