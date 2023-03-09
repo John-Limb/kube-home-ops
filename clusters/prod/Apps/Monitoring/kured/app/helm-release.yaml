@@ -20,13 +20,14 @@ spec:
       timeZone: ${TZ}
       startTime: "3:00"
       endTime: "5:00"
-      preRebootNodeLabels: [reboot=rebootrequired]
-      postRebootNodeLabels: [reboot=rebootnotneeded]
       drainTimeout: 20m
       rebootDays: ["sun"]
       messageTemplateDrain: "⏳ Draining node... %s"
       messageTemplateReboot: "♻️ Node Rebooted... %s"
       rebootCommand: "/usr/bin/systemctl reboot"
       notifyUrl: ${SECRET_SLACK_URL_REBOOT}
+    tolerations:
+    - key: "node-role.kubernetes.io/master"
+      operator: "Exists"
     metrics:
-      create: true
+      create: true  
