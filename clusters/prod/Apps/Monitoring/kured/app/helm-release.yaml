@@ -26,8 +26,5 @@ spec:
       messageTemplateReboot: "♻️ Node Rebooted... %s"
       rebootCommand: "/usr/bin/systemctl reboot"
       notifyUrl: ${SECRET_SLACK_URL_REBOOT}
-    tolerations:
-    - key: "node-role.kubernetes.io/master"
-      operator: "Exists"
     metrics:
       create: true  
