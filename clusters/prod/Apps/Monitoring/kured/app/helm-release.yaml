@@ -21,7 +21,7 @@ spec:
       startTime: "3:00"
       endTime: "5:00"
       drainTimeout: 20m
-      rebootDays: ["sun"]
+      rebootDays: ["sat"]
       messageTemplateDrain: "⏳ Draining node... %s"
       messageTemplateReboot: "♻️ Node Rebooted... %s"
       rebootCommand: "/usr/bin/systemctl reboot"
