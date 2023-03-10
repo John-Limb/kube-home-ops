@@ -1,0 +1,38 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: apps-code-server
+  namespace: flux-system
+  labels:
+    substitution.flux.home.arpa/enabled: "true"
+spec:
+  path: ./clusters/prod/Apps/development/code-server/app
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  interval: 30m
+  prune: false
+  wait: true
+  timeout: 5m
+  healthChecks:
+    - apiVersion: helm.toolkit.fluxcd.io/v2beta1
+      kind: HelmRelease
+      name: code-server
+      namespace: development
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: apps-code-server-config
+  namespace: flux-system
+  labels:
+    substitution.flux.home.arpa/enabled: "true"
+spec:
+  dependsOn:
+    - name: apps-code-server
+  interval: 30m
+  path: "./clusters/prod/Apps/development/code-server/config"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
