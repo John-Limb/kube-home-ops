@@ -23,10 +23,6 @@ spec:
        owner: app
        secret:
         name: appdb-user-secret
-       postInitSQL:
-         - CREATE DATABASE IF NOT EXISTS immich
-         - CREATE USER IF NOT EXISTS immich with encrypted password '${SECRET_IMMICH_DB_PASS}'
-         - GRANT ALL privileges on database immich to immich
  monitoring:
    disableDefaultQueries: false
    enablePodMonitor: true
