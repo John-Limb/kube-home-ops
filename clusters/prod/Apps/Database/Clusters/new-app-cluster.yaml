@@ -27,7 +27,7 @@ spec:
    disableDefaultQueries: false
    enablePodMonitor: true
  backup:
-   retentionPolicy: "10d"
+   retentionPolicy: "5d"
    barmanObjectStore:
      destinationPath: "S3://${SECRET_AWS_POSTGRES_BUCKET}"
      s3Credentials:
