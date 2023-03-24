@@ -43,12 +43,11 @@ spec:
         ports:
           http:
             port: 8108
-    volumeClaimTemplates:
-      - name: config
+    persistence:
+      config:
+        enabled: true
+        existingClaim: immich-typesense
         mountPath: /config
-        accessMode: ReadWriteOnce
-        size: 1Gi
-        storageClass: longhorn
     resources:
       requests:
         cpu: 100m
