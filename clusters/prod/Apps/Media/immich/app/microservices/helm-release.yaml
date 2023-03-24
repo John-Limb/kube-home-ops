@@ -24,6 +24,7 @@ spec:
   dependsOn:
     - name: immich-server
     - name: immich-redis
+    - name: immich-typesense
   values:
     controller:
       annotations:

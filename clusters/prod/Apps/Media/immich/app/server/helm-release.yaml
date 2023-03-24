@@ -23,6 +23,7 @@ spec:
       retries: 3
   dependsOn:
     - name: immich-redis
+    - name: immich-typesense
   values:
     controller:
       annotations:
