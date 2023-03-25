@@ -27,11 +27,6 @@ spec:
       replicaCount: 2
       metrics:
         enabled: true
-      readinessProbe:
-        httpGet:
-          path: "/healthz"
-          port: 10254
-          scheme: "HTTP"
       extraEnvs:
         - name: TZ
           value: "${TZ}"
