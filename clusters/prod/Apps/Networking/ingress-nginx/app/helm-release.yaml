@@ -58,10 +58,10 @@ spec:
           networking-system/default-ssl
       resources:
         requests:
-          cpu: 20m
+          cpu: 200m
           memory: 250Mi
         limits:
-          memory: 500Mi
+          memory: 900Mi
     defaultBackend:
       enabled: true
       image:
