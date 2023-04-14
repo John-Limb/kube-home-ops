@@ -11,9 +11,9 @@ spec:
     kind: GitRepository
     name: flux-system
   interval: 30m
-  dependsOn: 
-    - name: networking-system-metallb
-  prune: false
+  dependsOn:
+  - name: networking-system-metallb
+  prune: true
   wait: true
   timeout: 5m
 ---
@@ -26,7 +26,7 @@ metadata:
     substitution.flux.home.arpa/enabled: "true"
 spec:
   dependsOn:
-    - name: networking-system-ingress-nginx
+  - name: networking-system-ingress-nginx
   interval: 30m
   path: "./clusters/prod/Apps/Networking/ingress-nginx/config"
   prune: true
