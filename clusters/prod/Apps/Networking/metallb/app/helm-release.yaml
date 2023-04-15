@@ -1,4 +1,3 @@
----
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -31,9 +30,9 @@ spec:
     controller:
       resources:
         limits:
-          memory: 100Mi
+          memory: 200Mi
     speaker:
       tolerateMaster: false
       resources:
         limits:
-          memory: 100Mi
+          memory: 200Mi
