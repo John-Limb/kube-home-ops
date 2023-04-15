@@ -3,6 +3,5 @@ kind: Kustomization
 resources:
 - Notifications
 - namespace.yaml
-- kured
 - uptimekuma/ks.yaml
 - kube-prometheus-stack/ks.yaml
