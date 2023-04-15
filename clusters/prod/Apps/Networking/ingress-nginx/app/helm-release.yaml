@@ -24,10 +24,17 @@ spec:
   values:
     controller:
       replicaCount: 2
+      updateStrategy:
+        rollingUpdate:
+          maxUnavailable: 1
+          maxSurge: 1
+        type: RollingUpdate
       extraEnvs:
       - name: TZ
         value: "${TZ}"
       service:
+        enabled: true
+        type: LoadBalancer
         annotations:
           metallb.universe.tf/loadBalancerIPs: |-
             ${METALLB_INGRESS_ADDR}
@@ -53,8 +60,8 @@ spec:
         enabled: false
       resources:
         requests:
-          cpu: 10m
-          memory: 250Mi
+          cpu: 30m
+          memory: 512Mi
     defaultBackend:
       enabled: true
       image:
