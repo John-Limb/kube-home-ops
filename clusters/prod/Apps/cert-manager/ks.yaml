@@ -11,8 +11,8 @@ spec:
     kind: GitRepository
     name: flux-system
   interval: 30m
-  dependsOn: 
-    - name: networking-system-ingress-nginx
+  dependsOn:
+  - name: networking-system-metallb
   prune: false
   wait: true
   timeout: 5m
@@ -27,7 +27,7 @@ metadata:
     substitution.flux.home.arpa/enabled: "true"
 spec:
   dependsOn:
-    - name: app-cert-manager
+  - name: app-cert-manager
   interval: 30m
   path: "./clusters/prod/Apps/cert-manager/config"
   prune: true
