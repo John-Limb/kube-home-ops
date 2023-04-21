@@ -3,6 +3,8 @@ kind: Kustomization
 metadata:
   name: networking-system-metallb
   namespace: flux-system
+  labels:
+    substitution.flux.home.arpa/enabled: "true"
 spec:
   path: ./clusters/prod/Apps/Networking/metallb/app
   sourceRef:
@@ -18,9 +20,11 @@ kind: Kustomization
 metadata:
   name: networking-system-metallb-config
   namespace: flux-system
+  labels:
+    substitution.flux.home.arpa/enabled: "true"
 spec:
   dependsOn:
-    - name: networking-system-metallb
+  - name: networking-system-metallb
   interval: 30m
   path: "./clusters/prod/Apps/Networking/metallb/config"
   prune: true
