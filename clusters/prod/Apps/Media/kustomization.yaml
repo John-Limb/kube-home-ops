@@ -3,5 +3,4 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - immich/ks.yaml
-- joplin/ks.yaml
 - libreddit/ks.yaml
