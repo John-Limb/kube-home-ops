@@ -1,4 +1,3 @@
----
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
@@ -18,26 +17,41 @@ spec:
   postBuild:
     substitute: {}
     substituteFrom:
-      - kind: ConfigMap
-        name: global-vars
-      - kind: Secret
-        name: global-secrets
+    - kind: ConfigMap
+      name: global-vars
+    - kind: Secret
+      name: global-secrets
   patches:
-    - patch: |-
-        apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-        kind: Kustomization
-        metadata:
-          name: not-used
-        spec:
-          decryption:
-            provider: sops
-            secretRef:
-              name: sops-age
-          postBuild:
-            substituteFrom:
-              - kind: ConfigMap
-                name: global-vars
-              - kind: Secret
-                name: global-secrets
-      target:
-        labelSelector: substitution.flux.home.arpa/enabled=true
+  - patch: |-
+      apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+      kind: Kustomization
+      metadata:
+        name: not-used
+      spec:
+        decryption:
+          provider: sops
+          secretRef:
+            name: sops-age
+        postBuild:
+          substituteFrom:
+            - kind: ConfigMap
+              name: global-vars
+            - kind: Secret
+              name: global-secrets
+    target:
+      labelSelector: substitution.flux.home.arpa/enabled=true
+  # REQUIRED: Enable Helm near OOM detection
+  # https://fluxcd.io/flux/cheatsheets/bootstrap/#enable-helm-near-oom-detection
+  - patch: |
+      - op: add
+        path: /spec/template/spec/containers/0/args/-
+        value: --feature-gates=OOMWatch=true
+      - op: add
+        path: /spec/template/spec/containers/0/args/-
+        value: --oom-watch-memory-threshold=95
+      - op: add
+        path: /spec/template/spec/containers/0/args/-
+        value: --oom-watch-interval=500ms
+    target:
+      kind: Deployment
+      name: helm-controller
