@@ -39,10 +39,7 @@ spec:
             - kind: Secret
               name: global-secrets
     target:
-      group: kustomize.toolkit.fluxcd.io
-      version: v1
-      kind: Kustomization
-      labelSelector: substitution.flux.home.arpa/disabled notin (true)
+      labelSelector: substitution.flux.home.arpa/enabled=true
   # REQUIRED: Enable Helm near OOM detection
   # https://fluxcd.io/flux/cheatsheets/bootstrap/#enable-helm-near-oom-detection
   - patch: |
