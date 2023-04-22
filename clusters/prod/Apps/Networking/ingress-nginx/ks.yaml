@@ -26,7 +26,7 @@ metadata:
     substitution.flux.home.arpa/enabled: "true"
 spec:
   dependsOn:
-  - name: apps
+  - name: app-cert-manager
   interval: 10m
   timeout: 5m
   path: "./clusters/prod/Apps/Networking/ingress-nginx/config"
