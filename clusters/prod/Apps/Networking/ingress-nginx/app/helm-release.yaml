@@ -59,6 +59,8 @@ spec:
         use-forwarded-headers: "true"
       metrics:
         enabled: false
+      extraArgs:
+        default-ssl-certificate: networking-system/default-ssl
       resources:
         requests:
           cpu: 30m
