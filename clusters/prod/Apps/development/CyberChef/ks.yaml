@@ -23,7 +23,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: apps-CyberChef-config
+  name: apps-cyberchef-config
   namespace: flux-system
   labels:
     substitution.flux.home.arpa/enabled: "true"
