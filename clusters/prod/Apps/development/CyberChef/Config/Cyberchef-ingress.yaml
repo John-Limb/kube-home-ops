@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cyberchef-ingress
+  namespace: development
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: cyberchef.${SECRET_INT_DOMAIN}
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "128k"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-write-timeout: "600"
+    hajimari.io/appName: cyberchef
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - cyberchef.${SECRET_INT_DOMAIN}
+    secretName: prod-cyberchef-${SECRET_INT_CERT_DOMAIN}
+  rules:
+  - host: "cyberchef.${SECRET_INT_DOMAIN}"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: cyberchef
+            port:
+              number: 8000
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: cyberchef.${SECRET_INT_DOMAIN}
+  namespace: development
+spec:
+  secretName: prod-cyberchef-${SECRET_INT_CERT_DOMAIN}
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "cyberchef.${SECRET_INT_DOMAIN}"
+  dnsNames:
+  - "cyberchef.${SECRET_INT_DOMAIN}"
