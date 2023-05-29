@@ -1,4 +1,3 @@
----
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -22,24 +21,24 @@ spec:
     remediation:
       retries: 3
   dependsOn:
-    - name: immich-server
-    - name: immich-redis
-    - name: immich-typesense
+  - name: immich-server
+  - name: immich-redis
+  - name: immich-typesense
   values:
     controller:
       annotations:
         reloader.stakater.com/auto: "true"
     image:
       repository: ghcr.io/immich-app/immich-server
-      tag: v1.54.1
+      tag: v1.57.1
     command: /bin/sh
     args:
-      - ./start-microservices.sh
+    - ./start-microservices.sh
     envFrom:
-      - secretRef:
-          name: immich-secret
-      - configMapRef:
-          name: immich-configmap
+    - secretRef:
+        name: immich-secret
+    - configMapRef:
+        name: immich-configmap
     service:
       main:
         enabled: false
