@@ -11,15 +11,14 @@
    "dependencyDashboardTitle": "🤖 Renovate Dashboard",
    "rebaseWhen": "conflicted",
    "schedule": [
-    "after 10pm every weekday",
-    "before 6am every weekday",
+    "after 3pm every weekday",
     "every weekend"
   ],
    "flux": {
-     "fileMatch": ["clusters/prod/.+\\.ya?ml$"],
+     "fileMatch": ["clusters/prod/.+\\.ya?ml$"]
   },
   "helm-values": {
-     "fileMatch": ["clusters/prod/Apps/.+\\.ya?ml$"],
+     "fileMatch": ["clusters/prod/Apps/.+\\.ya?ml$"]
   },
   "kubernetes": {
      "fileMatch": ["clusters/prod/Apps/.+\\.ya?ml$"]
