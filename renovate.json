@@ -7,7 +7,7 @@
    "prHourlyLimit": 10,
    "timezone": "Europe/London",
    "platform": "github",
-   "username": "Morpheus[bot]",
+   "username": "Renovate[bot]",
    "dependencyDashboardTitle": "🤖 Renovate Dashboard",
    "rebaseWhen": "conflicted",
    "schedule": [
@@ -16,12 +16,12 @@
     "every weekend"
   ],
    "flux": {
-     fileMatch: ["clusters/prod/.+\\.ya?ml$"],
+     "fileMatch": ["clusters/prod/.+\\.ya?ml$"],
   },
   "helm-values": {
-     fileMatch: ["clusters/prod/Apps/.+\\.ya?ml$"],
+     "fileMatch": ["clusters/prod/Apps/.+\\.ya?ml$"],
   },
   "kubernetes": {
-     fileMatch: ["clusters/prod/Apps/.+\\.ya?ml$"]
+     "fileMatch": ["clusters/prod/Apps/.+\\.ya?ml$"]
   }
 }
